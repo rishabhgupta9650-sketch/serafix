@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quality & Certifications — Serafix® | ISO, BIS, EN 12004 Standards</title>
+  <meta name="description" content="Serafix® is certified to ISO 9001:2015, BIS IS 15477, EN 12004 and more. Learn about our manufacturing quality control, testing procedures, and commitment to standards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 640px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .cert-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .cert-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      padding: 32px 28px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .cert-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--navy); }
+
+    .cert-emblem {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-navy);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 8px 24px rgba(26,35,126,0.3);
+    }
+    .cert-emblem-code {
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--red);
+      letter-spacing: 0.05em;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .cert-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    .cert-card-desc {
+      font-size: 0.88rem;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .cert-card-tag {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 4px 14px;
+      background: rgba(26,35,126,0.06);
+      border: 1px solid rgba(26,35,126,0.12);
+      border-radius: 100px;
+      font-family: var(--font-label);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .qc-steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--gray-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    @media (min-width: 640px) { .qc-steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .qc-steps { grid-template-columns: repeat(5, 1fr); } }
+
+    .qc-step {
+      background: var(--white);
+      padding: 32px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .qc-step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--gradient-navy);
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .qc-step-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .qc-step-desc {
+      font-size: 0.78rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    @media (min-width: 768px) { .test-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .test-item {
+      display: flex;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition-fast);
+    }
+    .test-item:hover { border-color: var(--red); box-shadow: var(--shadow-sm); }
+
+    .test-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(0,180,216,0.08);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .test-icon svg { width: 22px; height: 22px; color: var(--red); }
+
+    .test-title { font-family: var(--font-heading); font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .test-desc { font-size: 0.85rem; color: var(--gray-600); line-height: 1.5; }
+
+    .commitment-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 768px) { .commitment-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .commitment-grid { grid-template-columns: repeat(4, 1fr); } }
+
+    .commitment-item {
+      padding: 32px 24px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      transition: var(--transition);
+    }
+    .commitment-item:hover { background: rgba(255,255,255,0.07); border-color: rgba(211,47,47,0.2); }
+
+    .commitment-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(0,180,216,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .commitment-icon svg { width: 26px; height: 26px; color: var(--red); }
+    .commitment-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .commitment-text { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="products.html"     class="nav-link">Products</a>
+        <a href="applications.html" class="nav-link">Applications</a>
+        <a href="quality.html"      class="nav-link active">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="mobileNav">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link">Home</a>
+      <a href="about.html"        class="nav-mobile-link">About Us</a>
+      <a href="products.html"     class="nav-mobile-link">Products</a>
+      <a href="applications.html" class="nav-mobile-link">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link active">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:var(--white);">Quality & Certifications</span></div>
+      <div class="section-label" data-animate>Our Standards</div>
+      <h1 data-animate data-delay="100">Quality is Not<br/>an Afterthought</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:600px;line-height:1.75;" data-animate data-delay="200">At Serafix®, quality is embedded in every process — from raw material selection to final product dispatch. Our certifications prove it.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section class="section-py">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Certified Excellence</div>
+      <h2 class="section-title" data-animate data-delay="100">International &amp; National<br/><span class="text-navy">Certifications</span></h2>
+      <p class="section-subtitle mx-auto" data-animate data-delay="200">Every Serafix® product is manufactured and tested against rigorous international and national quality standards.</p>
+    </div>
+
+    <div class="cert-grid">
+
+      <div class="cert-card" data-animate>
+        <div class="cert-emblem">
+          <div class="cert-emblem-code">ISO<br/>9001</div>
+        </div>
+        <div class="cert-card-title">ISO 9001:2015</div>
+        <div class="cert-card-desc">Quality Management System certification covering our entire manufacturing operation — from raw material intake to product dispatch and customer service.</div>
+        <div class="cert-card-tag">Quality Management</div>
+      </div>
+
+      <div class="cert-card" data-animate data-delay="100">
+        <div class="cert-emblem">
+          <div class="cert-emblem-code">IS<br/>15477</div>
+        </div>
+        <div class="cert-card-title">BIS IS 15477</div>
+        <div class="cert-card-desc">Bureau of Indian Standards certification for adhesive mortars for fixing ceramic tile and natural stone — India's primary quality standard for our product category.</div>
+        <div class="cert-card-tag">Indian Standard</div>
+      </div>
+
+      <div class="cert-card" data-animate data-delay="200">
+        <div class="cert-emblem">
+          <div class="cert-emblem-code">EN<br/>12004</div>
+        </div>
+        <div class="cert-card-title">EN 12004 Compliant</div>
+        <div class="cert-card-desc">European standard for adhesives for tiles. All Serafix® products are classified under EN 12004 grading (C1, C2, C2T, C2TE, S1) based on rigorous laboratory testing.</div>
+        <div class="cert-card-tag">European Standard</div>
+      </div>
+
+      <div class="cert-card" data-animate data-delay="300">
+        <div class="cert-emblem">
+          <div class="cert-emblem-code">REACH</div>
+        </div>
+        <div class="cert-card-title">REACH Compliant</div>
+        <div class="cert-card-desc">All raw materials and finished products comply with REACH chemical safety regulations, ensuring safety for applicators, end users, and the environment.</div>
+        <div class="cert-card-tag">Chemical Safety</div>
+      </div>
+
+      <div class="cert-card" data-animate data-delay="400">
+        <div class="cert-emblem">
+          <div class="cert-emblem-code">ISO<br/>14001</div>
+        </div>
+        <div class="cert-card-title">ISO 14001</div>
+        <div class="cert-card-desc">Environmental Management System certification demonstrating our commitment to responsible manufacturing, waste minimization, and reduced environmental footprint.</div>
+        <div class="cert-card-tag">Environmental</div>
+      </div>
+
+      <div class="cert-card" data-animate data-delay="500">
+        <div class="cert-emblem" style="background:var(--gradient-gold);">
+          <div class="cert-emblem-code" style="color:var(--dark);">3RD<br/>PARTY</div>
+        </div>
+        <div class="cert-card-title">Third-Party Tested</div>
+        <div class="cert-card-desc">Independent laboratory testing by NABL-accredited test houses verifies our performance claims. Test reports are available upon request for qualified specifiers.</div>
+        <div class="cert-card-tag">Independent Verification</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QC PROCESS -->
+<section class="section-py section-light">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Our Process</div>
+      <h2 class="section-title" data-animate data-delay="100">5-Stage Quality<br/><span class="text-navy">Control Process</span></h2>
+      <p class="section-subtitle mx-auto" data-animate data-delay="200">From the moment raw materials enter our plant to the moment a bag reaches your site, quality is verified at every stage.</p>
+    </div>
+
+    <div class="qc-steps" data-animate>
+      <div class="qc-step">
+        <div class="qc-step-num">01</div>
+        <div class="qc-step-title">Raw Material Testing</div>
+        <div class="qc-step-desc">All incoming raw materials are tested against approved specifications before acceptance into production.</div>
+      </div>
+      <div class="qc-step">
+        <div class="qc-step-num">02</div>
+        <div class="qc-step-title">Batching Control</div>
+        <div class="qc-step-desc">Automated gravimetric batching ensures precise raw material ratios in every production batch.</div>
+      </div>
+      <div class="qc-step">
+        <div class="qc-step-num">03</div>
+        <div class="qc-step-title">In-Process Testing</div>
+        <div class="qc-step-desc">Physical and chemical tests conducted during production to detect and correct any variation immediately.</div>
+      </div>
+      <div class="qc-step">
+        <div class="qc-step-num">04</div>
+        <div class="qc-step-title">Finished Product QC</div>
+        <div class="qc-step-desc">Each batch is tested for tensile adhesion, slip, open time, and consistency before approval for dispatch.</div>
+      </div>
+      <div class="qc-step">
+        <div class="qc-step-num">05</div>
+        <div class="qc-step-title">Batch Traceability</div>
+        <div class="qc-step-desc">Every bag carries a batch code linking it to full production and test records — complete supply chain traceability.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- TESTING PARAMETERS -->
+<section class="section-py">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr;gap:64px;align-items:center;" class="about-split">
+
+      <div data-animate>
+        <div class="section-label">In-House Lab</div>
+        <h2 class="section-title">What We Test<br/><span class="text-navy">on Every Batch</span></h2>
+        <div class="divider-gold" style="margin-bottom:32px;"></div>
+
+        <div class="test-grid">
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+            <div>
+              <div class="test-title">Tensile Adhesion Strength</div>
+              <div class="test-desc">Pull-off test per EN 1348. Minimum 0.5–1.5 N/mm² depending on grade.</div>
+            </div>
+          </div>
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v7c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V3z"/></svg></div>
+            <div>
+              <div class="test-title">Slip Resistance (Non-Sag)</div>
+              <div class="test-desc">T-class test: tile slip less than 0.5 mm on vertical surface.</div>
+            </div>
+          </div>
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div>
+              <div class="test-title">Open Time</div>
+              <div class="test-desc">E-class test: adhesive retains ≥ 0.5 N/mm² after 20 minutes open time.</div>
+            </div>
+          </div>
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg></div>
+            <div>
+              <div class="test-title">Deformability (Flexibility)</div>
+              <div class="test-desc">S1 class: transverse deformation ≥ 2.5 mm for flexible adhesives.</div>
+            </div>
+          </div>
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+            <div>
+              <div class="test-title">Water Immersion Adhesion</div>
+              <div class="test-desc">Adhesion after 7-day water immersion (min ≥ 0.5 N/mm²).</div>
+            </div>
+          </div>
+          <div class="test-item">
+            <div class="test-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h10M12 2v10m4.24-7.76-7.07 7.07M22 12h-4m-2.93 6.07-2.12-2.12M12 22v-4M4.93 18.07l2.12-2.12M2 12h4"/></svg></div>
+            <div>
+              <div class="test-title">Heat Aging Adhesion</div>
+              <div class="test-desc">Adhesion after 14-day heat aging at 70°C (min ≥ 0.5 N/mm²).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80"
+          alt="Quality testing laboratory"
+          style="width:100%;height:520px;object-fit:cover;border-radius:20px;"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- QUALITY COMMITMENT -->
+<section class="section-py" style="background:var(--gradient-dark);">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Our Commitment</div>
+      <h2 class="section-title" style="color:var(--white);" data-animate data-delay="100">The Serafix®<br/><span style="color:var(--red);">Quality Promise</span></h2>
+    </div>
+
+    <div class="commitment-grid">
+      <div class="commitment-item" data-animate>
+        <div class="commitment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="commitment-title">Batch Consistency</div>
+        <div class="commitment-text">Every bag performs identically. No surprises on site. No variation between batches.</div>
+      </div>
+      <div class="commitment-item" data-animate data-delay="100">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="commitment-title">Honest Datasheets</div>
+        <div class="commitment-text">Technical data is based on actual test results — not optimistic marketing numbers.</div>
+      </div>
+      <div class="commitment-item" data-animate data-delay="200">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="commitment-title">Full Traceability</div>
+        <div class="commitment-text">Every bag links to production records, raw material certificates, and test data.</div>
+      </div>
+      <div class="commitment-item" data-animate data-delay="300">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
+        <div class="commitment-title">Field Support</div>
+        <div class="commitment-text">Technical engineers available for on-site application guidance and project support.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STANDARDS TABLE -->
+<section class="section-py">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Classification Reference</div>
+      <h2 class="section-title" data-animate data-delay="100">EN 12004 Product<br/><span class="text-navy">Classification Guide</span></h2>
+    </div>
+
+    <div style="overflow-x:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);" data-animate>
+      <table class="spec-table" style="min-width:640px;">
+        <thead>
+          <tr>
+            <th>Classification</th>
+            <th>Description</th>
+            <th>Min. Adhesion (N/mm²)</th>
+            <th>Serafix® Products</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag tag-blue">C1</span></td>
+            <td>Normal cement-based adhesive</td>
+            <td>≥ 0.5</td>
+            <td>SF 705, SF 711</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-blue">C2</span></td>
+            <td>Improved cement-based adhesive</td>
+            <td>≥ 1.0</td>
+            <td>SF 711, SF 722</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-blue">C2T</span></td>
+            <td>Improved with reduced slip</td>
+            <td>≥ 1.0</td>
+            <td>SF 722</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-cyan">C2TE</span></td>
+            <td>Improved, reduced slip, extended open time</td>
+            <td>≥ 1.0</td>
+            <td>SF 722, SF 735</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-cyan">C2TE S1</span></td>
+            <td>+ Deformable (flexible) class</td>
+            <td>≥ 1.5</td>
+            <td>SF 735, SF 755</td>
+          </tr>
+          <tr>
+            <td><span class="tag" style="background:rgba(109,40,217,0.08);color:#6d28d9;border-color:rgba(109,40,217,0.2);">R2T</span></td>
+            <td>Reaction resin (epoxy) adhesive</td>
+            <td>≥ 2.0</td>
+            <td>SF-217 Epoxy Grout</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;" data-animate>Need Certificates or Test Reports?</h2>
+      <p style="font-size:1rem;max-width:500px;margin:0 auto 40px;" data-animate data-delay="100">We provide complete technical documentation, certificates of conformance, and test reports for qualified specifiers and project teams.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="200">
+        <a href="contact.html" class="btn btn-secondary btn-lg">Request Documentation</a>
+        <a href="products.html" class="btn btn-outline btn-lg">View Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;"><span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:.5rem;color:var(--red);">®</sup></div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">A Vipra Bonding Solutions (VBS) brand. Manufacturing premium construction adhesives since 2009.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Serafix® Tile & Stone Adhesives | Full Range</title>
+  <meta name="description" content="Explore the complete Serafix® product range: tile adhesives, marble adhesives, large format adhesives, epoxy adhesives, and waterproof solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Filter bar */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 48px;
+    }
+
+    .filter-btn {
+      font-family: var(--font-label);
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      border-radius: 100px;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-600);
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+
+    .filter-btn:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+    }
+
+    .filter-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .products-full-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 640px) {
+      .products-full-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .products-full-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Product detail card (horizontal) */
+    .product-detail-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: var(--transition);
+    }
+
+    .product-detail-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--red);
+    }
+
+    .pdc-header {
+      background: var(--gradient-navy);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pdc-header::after {
+      content: '';
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      width: 120px;
+      height: 120px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+
+    .pdc-code {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .pdc-name {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .pdc-grade {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(211,47,47,0.2);
+      border: 1px solid rgba(211,47,47,0.2);
+      color: var(--red);
+      font-family: var(--font-label);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    .pdc-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+
+    .pdc-desc {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .pdc-specs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .pdc-spec {
+      background: var(--gray-100);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+    }
+
+    .pdc-spec-label {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 4px;
+    }
+
+    .pdc-spec-value {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .pdc-uses {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 24px;
+    }
+
+    .pdc-footer {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    /* Standards strip */
+    .standards-strip {
+      background: var(--gray-100);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 64px;
+    }
+
+    .standard-item {
+      text-align: center;
+    }
+
+    .standard-code {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .standard-name {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="products.html"     class="nav-link active">Products</a>
+        <a href="applications.html" class="nav-link">Applications</a>
+        <a href="quality.html"      class="nav-link">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="mobileNav">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link">Home</a>
+      <a href="about.html"        class="nav-mobile-link">About Us</a>
+      <a href="products.html"     class="nav-mobile-link active">Products</a>
+      <a href="applications.html" class="nav-mobile-link">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span>
+        <span style="color:var(--white);">Products</span>
+      </div>
+      <div class="section-label" data-animate>Complete Product Range</div>
+      <h1 data-animate data-delay="100">Adhesives Built for<br/>Every Application</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:600px;line-height:1.75;" data-animate data-delay="200">
+        From standard ceramic tiles to heavy natural stone and large-format porcelain — Serafix® has a precisely engineered adhesive for every bonding challenge.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- STANDARDS STRIP -->
+<section style="padding:48px 0;background:var(--navy-dark);">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;">
+      <div style="font-family:var(--font-label);font-size:0.78rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:700;">All Products Comply With:</div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;">
+        <div class="standard-item">
+          <div class="standard-code" style="color:var(--red);">EN 12004</div>
+          <div class="standard-name" style="color:rgba(255,255,255,0.4);">European Tile Adhesive</div>
+        </div>
+        <div style="width:1px;height:32px;background:rgba(255,255,255,0.1);"></div>
+        <div class="standard-item">
+          <div class="standard-code" style="color:var(--red);">IS 15477</div>
+          <div class="standard-name" style="color:rgba(255,255,255,0.4);">BIS India Standard</div>
+        </div>
+        <div style="width:1px;height:32px;background:rgba(255,255,255,0.1);"></div>
+        <div class="standard-item">
+          <div class="standard-code" style="color:var(--red);">ISO 9001</div>
+          <div class="standard-name" style="color:rgba(255,255,255,0.4);">Quality Management</div>
+        </div>
+        <div style="width:1px;height:32px;background:rgba(255,255,255,0.1);"></div>
+        <div class="standard-item">
+          <div class="standard-code" style="color:var(--red);">REACH</div>
+          <div class="standard-name" style="color:rgba(255,255,255,0.4);">Chemical Compliance</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PRODUCTS -->
+<section class="section-py">
+  <div class="container">
+
+    <!-- Filter -->
+    <div class="filter-bar" role="group" aria-label="Product filter">
+      <button class="filter-btn active" data-filter-btn="all">All Products</button>
+      <button class="filter-btn" data-filter-btn="adhesive">Adhesives</button>
+      <button class="filter-btn" data-filter-btn="grout">Grouts</button>
+      <button class="filter-btn" data-filter-btn="epoxy">Epoxy</button>
+    </div>
+
+    <div class="products-full-grid">
+
+      <!-- SF 705: Premium Floor Tile Adhesive -->
+      <div class="product-detail-card" data-animate data-filter-item="adhesive">
+        <div class="pdc-header">
+          <div class="pdc-code">Adhesive Series · Floor Tiles</div>
+          <div class="pdc-name">SF 705</div>
+          <div class="pdc-grade">Type-1T / C1T · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Premium floor tile adhesive for ceramic tiles on floors. Good bonding strength, water resistance and easy to use. Suitable for floor tiles on floors, best for ceramic tiles. Covers 55–60 sq.ft per bag.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Coverage</div>
+              <div class="pdc-spec-value">55–60 sq.ft/bag</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Color</div>
+              <div class="pdc-spec-value">Grey</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Ceramic Tiles</span>
+            <span class="tag tag-blue">Floor Application</span>
+            <span class="tag">Water Resistant</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-705.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF 711: Superior Tile Adhesive -->
+      <div class="product-detail-card" data-animate data-delay="100" data-filter-item="adhesive">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #0D4F7A, #0A3E7A);">
+          <div class="pdc-code">Adhesive Series · Floor & Wall</div>
+          <div class="pdc-name">SF 711</div>
+          <div class="pdc-grade">Type-1T / C1T · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Superior tile adhesive for floor and wall tiles. Superior bonding, water resistant and easy to apply. Available in Grey and White colors. Covers 55–60 sq.ft per bag. Shelf life: 12 months.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Coverage</div>
+              <div class="pdc-spec-value">55–60 sq.ft/bag</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Colors</div>
+              <div class="pdc-spec-value">Grey & White</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Floor Tiles</span>
+            <span class="tag tag-blue">Wall Tiles</span>
+            <span class="tag">Water Resistant</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-711.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF 722: High-Strength Non-Skid -->
+      <div class="product-detail-card" data-animate data-delay="200" data-filter-item="adhesive">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #1a1a1a, #2a2a3a);">
+          <div class="pdc-code">Adhesive Series · High Traffic</div>
+          <div class="pdc-name">SF 722</div>
+          <div class="pdc-grade">Type-2T / C2TE · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">High-strength non-skid tile adhesive for high-traffic floors. Non-slip, improved bonding strength. Suitable for high-traffic floors and non-slip surfaces. Covers 55–60 sq.ft per bag.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Coverage</div>
+              <div class="pdc-spec-value">55–60 sq.ft/bag</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Color</div>
+              <div class="pdc-spec-value">Grey</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">High Traffic</span>
+            <span class="tag tag-blue">Non-Slip</span>
+            <span class="tag">High Strength</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-722.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF 735: Superior Multipurpose -->
+      <div class="product-detail-card" data-animate data-filter-item="adhesive">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #0B1F52, #1A2A7A);">
+          <div class="pdc-code">Adhesive Series · Multipurpose</div>
+          <div class="pdc-name">SF 735</div>
+          <div class="pdc-grade">Type-3T S1 / C2TE S1 · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Superior multipurpose tile adhesive. Flexible, superior bond. Suitable for floor &amp; wall tiles including porcelain, granite, marble. Ideal for premium interiors with large format stone tiles.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Flexibility</div>
+              <div class="pdc-spec-value">S1 Class</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Color</div>
+              <div class="pdc-spec-value">Grey</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Porcelain</span>
+            <span class="tag">Granite</span>
+            <span class="tag tag-blue">Marble</span>
+            <span class="tag">Flexible S1</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-735.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF 755: Highly-Flexible Premium -->
+      <div class="product-detail-card" data-animate data-delay="100" data-filter-item="adhesive">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #1A237E, #311B92);">
+          <div class="pdc-code">Adhesive Series · Premium Flexible</div>
+          <div class="pdc-name">SF 755</div>
+          <div class="pdc-grade">Type-4T S2 / C2TE S2 · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Highly-flexible premium versatile tile adhesive. S2 deformable class. Suitable for natural stone, marble, large format tiles and swimming pools. The ultimate adhesive for demanding applications.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Flexibility</div>
+              <div class="pdc-spec-value">S2 Class</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Color</div>
+              <div class="pdc-spec-value">Grey</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Natural Stone</span>
+            <span class="tag">Large Format</span>
+            <span class="tag tag-blue">Swimming Pools</span>
+            <span class="tag">Highly Flexible S2</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-755.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF-217: Waterproof Epoxy Grout -->
+      <div class="product-detail-card" data-animate data-delay="200" data-filter-item="epoxy">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #1a0a3a, #2D1B69);">
+          <div class="pdc-code">Epoxy Grout · 3-Component System</div>
+          <div class="pdc-name">SF-217</div>
+          <div class="pdc-grade">Waterproof Epoxy Grout</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Waterproof Epoxy Grout — 3-component system (Part A: Epoxy Resin + Part B: Hardener + Part C: Filler). Waterproof joint filling for tiles, stones, mosaics and chemical resistant areas.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">System</div>
+              <div class="pdc-spec-value">3-Component</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Waterproof</div>
+              <div class="pdc-spec-value">Yes</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Colors</div>
+              <div class="pdc-spec-value">Multiple</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">5 kg Bucket</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Waterproof</span>
+            <span class="tag">Chemical Resistant</span>
+            <span class="tag tag-blue">Stain Resistant</span>
+            <span class="tag">Mosaics</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-217.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SF-205: Tile Grout -->
+      <div class="product-detail-card" data-animate data-filter-item="grout">
+        <div class="pdc-header" style="background:linear-gradient(135deg, #003A52, #004A6A);">
+          <div class="pdc-code">Grout Series · Polymer Modified</div>
+          <div class="pdc-name">SF-205</div>
+          <div class="pdc-grade">Polymer Modified Tile Grout</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Polymer Modified Tile Grout for internal and external joint filling of tiles and natural stones on walls and floors. Fast setting, superior bonding, easy to clean. Available in different colors.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Pot Life</div>
+              <div class="pdc-spec-value">15–20 min</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Application</div>
+              <div class="pdc-spec-value">Internal &amp; External</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Colors</div>
+              <div class="pdc-spec-value">Multiple</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">1 kg Pack</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Fast Setting</span>
+            <span class="tag tag-blue">Joint Filling</span>
+            <span class="tag">Natural Stone</span>
+            <span class="tag">Easy Clean</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-205.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SELECTION GUIDE -->
+<section class="section-py section-light">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Product Selection Guide</div>
+      <h2 class="section-title" data-animate data-delay="100">Which SF Product is<br/><span class="text-navy">Right for Your Project?</span></h2>
+    </div>
+
+    <div style="overflow-x:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);" data-animate>
+      <table class="spec-table" style="min-width:700px;">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Grade</th>
+            <th>Best For</th>
+            <th>Coverage / Pack</th>
+            <th>Interior</th>
+            <th>Exterior</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SF 705</strong></td>
+            <td><span class="tag tag-blue">Type-1T / C1T</span></td>
+            <td>Ceramic Floor Tiles</td>
+            <td>55–60 sq.ft/bag</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#dc2626;font-size:1.1rem;">✗</td>
+          </tr>
+          <tr>
+            <td><strong>SF 711</strong></td>
+            <td><span class="tag tag-blue">Type-1T / C1T</span></td>
+            <td>Floor &amp; Wall Tiles</td>
+            <td>55–60 sq.ft/bag</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#dc2626;font-size:1.1rem;">✗</td>
+          </tr>
+          <tr>
+            <td><strong>SF 722</strong></td>
+            <td><span class="tag tag-blue">Type-2T / C2TE</span></td>
+            <td>High-Traffic, Non-Skid Floors</td>
+            <td>55–60 sq.ft/bag</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+          </tr>
+          <tr>
+            <td><strong>SF 735</strong></td>
+            <td><span class="tag tag-blue">Type-3T S1 / C2TE S1</span></td>
+            <td>Porcelain, Granite, Marble</td>
+            <td>20 kg bag</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+          </tr>
+          <tr>
+            <td><strong>SF 755</strong></td>
+            <td><span class="tag tag-blue">Type-4T S2 / C2TE S2</span></td>
+            <td>Natural Stone, Large Format, Pools</td>
+            <td>20 kg bag</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+          </tr>
+          <tr>
+            <td><strong>SF-217</strong></td>
+            <td><span class="tag" style="background:rgba(109,40,217,0.08);color:#6d28d9;border-color:rgba(109,40,217,0.2);">Epoxy Grout</span></td>
+            <td>Joint Filling, Chemical Resistant</td>
+            <td>5 kg bucket</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+          </tr>
+          <tr>
+            <td><strong>SF-205</strong></td>
+            <td><span class="tag tag-blue">Polymer Grout</span></td>
+            <td>Internal &amp; External Joint Filling</td>
+            <td>1 kg pack</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+            <td style="color:#16a34a;font-size:1.1rem;">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center" style="margin-top:40px;" data-animate>
+      <p style="margin-bottom:20px;">Not sure which product is right for your project?</p>
+      <a href="contact.html" class="btn btn-primary">Talk to Our Technical Team</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;" data-animate>Need Product Samples or Datasheets?</h2>
+      <p style="font-size:1rem;max-width:500px;margin:0 auto 40px;" data-animate data-delay="100">We supply technical datasheets and product samples to qualified contractors, architects, and developers upon request.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="200">
+        <a href="contact.html" class="btn btn-secondary btn-lg">Request Samples</a>
+        <a href="dealers.html" class="btn btn-outline btn-lg">Become a Dealer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;"><span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:.5rem;color:var(--red);">®</sup></div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">A Vipra Bonding Solutions (VBS) brand. Manufacturing premium construction adhesives since 2009.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

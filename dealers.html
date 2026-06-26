@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Dealer — Serafix® | Dealer & Distributor Inquiry</title>
+  <meta name="description" content="Join the Serafix® dealer and distributor network. Excellent margins, strong brand, growing demand. Submit your dealer inquiry today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .benefit-card {
+      display: flex;
+      gap: 20px;
+      padding: 28px;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+    .benefit-card:hover { border-color: var(--navy); box-shadow: var(--shadow-md); transform: translateX(4px); }
+
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      background: var(--gradient-navy);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .benefit-icon svg { width: 26px; height: 26px; color: var(--white); }
+    .benefit-title { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 6px; }
+    .benefit-desc { font-size: 0.88rem; color: var(--gray-600); line-height: 1.6; }
+
+    .dealer-form-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--gray-200);
+    }
+
+    @media (max-width: 640px) {
+      .dealer-form-card { padding: 28px 20px; }
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    @media (min-width: 640px) {
+      .form-row { grid-template-columns: 1fr 1fr; gap: 20px; }
+    }
+
+    .stat-box-dark {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+    }
+    .stat-box-dark .n { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--red); line-height: 1; }
+    .stat-box-dark .l { font-family: var(--font-label); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+    .partner-tier {
+      background: var(--gradient-navy);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .partner-tier::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .tier-badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 100px;
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .tier-name { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+    .tier-desc { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; line-height: 1.6; }
+    .tier-list { display: flex; flex-direction: column; gap: 8px; }
+    .tier-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: rgba(255,255,255,0.75); }
+    .tier-check { color: var(--red); font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="products.html"     class="nav-link">Products</a>
+        <a href="applications.html" class="nav-link">Applications</a>
+        <a href="quality.html"      class="nav-link">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="mobileNav">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link">Home</a>
+      <a href="about.html"        class="nav-mobile-link">About Us</a>
+      <a href="products.html"     class="nav-mobile-link">Products</a>
+      <a href="applications.html" class="nav-mobile-link">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link active">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span style="color:var(--white);">Become a Dealer</span></div>
+      <div class="section-label" data-animate>Partner With Us</div>
+      <h1 data-animate data-delay="100">Grow Your Business<br/>with Serafix®</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:600px;line-height:1.75;" data-animate data-delay="200">
+        Join our expanding dealer and distributor network. Partner with a trusted premium brand and serve the growing demand from builders, contractors, and architects in your region.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY PARTNER -->
+<section class="section-py" style="background:var(--gradient-dark);">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr;gap:64px;" class="about-split">
+
+      <div data-animate>
+        <div class="section-label" style="color:var(--red);">Why Serafix®</div>
+        <h2 class="section-title" style="color:var(--white);">Why Partner with<br/><span style="color:var(--red);">Serafix®?</span></h2>
+        <div class="divider-gold" style="margin-bottom:28px;"></div>
+        <p style="color:rgba(255,255,255,0.65);margin-bottom:32px;">Serafix® is a fast-growing premium brand in the construction adhesive market. As construction activity booms across India, demand for high-quality adhesives is at an all-time high. Be part of this growth.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+          <div class="stat-box-dark" data-animate data-delay="100">
+            <div class="n">15<span style="color:var(--red);">+</span></div>
+            <div class="l">Years in Market</div>
+          </div>
+          <div class="stat-box-dark" data-animate data-delay="200">
+            <div class="n">50<span style="color:var(--red);">+</span></div>
+            <div class="l">Active Dealers</div>
+          </div>
+          <div class="stat-box-dark" data-animate data-delay="300">
+            <div class="n">500<span style="color:var(--red);">+</span></div>
+            <div class="l">Projects Delivered</div>
+          </div>
+          <div class="stat-box-dark" data-animate data-delay="400">
+            <div class="n">12<span style="color:var(--red);">+</span></div>
+            <div class="l">Product Variants</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <div class="benefit-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div>
+              <div class="benefit-title" style="color:var(--white);">Attractive Margins</div>
+              <div class="benefit-desc" style="color:rgba(255,255,255,0.55);">Competitive dealer pricing with strong retail margins. Special volume pricing for high-turnover partners.</div>
+            </div>
+          </div>
+
+          <div class="benefit-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+            <div>
+              <div class="benefit-title" style="color:var(--white);">Marketing & POS Support</div>
+              <div class="benefit-desc" style="color:rgba(255,255,255,0.55);">Branding materials, product displays, brochures, sample kits, and digital marketing support provided.</div>
+            </div>
+          </div>
+
+          <div class="benefit-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            <div>
+              <div class="benefit-title" style="color:var(--white);">Technical Training</div>
+              <div class="benefit-desc" style="color:rgba(255,255,255,0.55);">Regular training sessions for your staff on product knowledge, application, and troubleshooting.</div>
+            </div>
+          </div>
+
+          <div class="benefit-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);">
+            <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div>
+              <div class="benefit-title" style="color:var(--white);">Brand Recognition</div>
+              <div class="benefit-desc" style="color:rgba(255,255,255,0.55);">Sell a brand that architects and contractors trust. Serafix® brand equity helps you win more business.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PARTNER TIERS -->
+<section class="section-py">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Partnership Levels</div>
+      <h2 class="section-title" data-animate data-delay="100">Choose Your<br/><span class="text-navy">Partnership Level</span></h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:28px;" class="grid-3-auto" data-animate>
+
+      <div class="partner-tier">
+        <span class="tier-badge" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);">Entry Level</span>
+        <div class="tier-name">Authorised Dealer</div>
+        <div class="tier-desc">Ideal for established building materials retailers and hardware stores entering the premium adhesive segment.</div>
+        <div class="tier-list">
+          <div class="tier-item"><span class="tier-check">✓</span> Product stock & sell</div>
+          <div class="tier-item"><span class="tier-check">✓</span> POS materials provided</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Basic product training</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Technical sales support</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Listed on website</div>
+        </div>
+      </div>
+
+      <div class="partner-tier" style="background:linear-gradient(135deg, #0D3050, #004080);border:2px solid var(--red);">
+        <span class="tier-badge" style="background:var(--red);color:var(--dark);">Recommended</span>
+        <div class="tier-name">Premium Dealer</div>
+        <div class="tier-desc">For growth-focused partners willing to invest in brand building and achieve higher sales volumes.</div>
+        <div class="tier-list">
+          <div class="tier-item"><span class="tier-check">✓</span> All Authorised Dealer benefits</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Better trade pricing</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Dedicated account manager</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Contractor referral network</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Co-branded marketing</div>
+          <div class="tier-item"><span class="tier-check">✓</span> On-site technical support</div>
+        </div>
+      </div>
+
+      <div class="partner-tier" style="background:linear-gradient(135deg, #1a0a3a, #2D1B69);">
+        <span class="tier-badge" style="background:rgba(211,47,47,0.2);color:var(--red);">High Volume</span>
+        <div class="tier-name">Regional Distributor</div>
+        <div class="tier-desc">For businesses capable of managing distribution across districts or states with a robust sales team.</div>
+        <div class="tier-list">
+          <div class="tier-item"><span class="tier-check">✓</span> All Premium Dealer benefits</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Exclusive territory</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Best trade pricing</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Sub-dealer management</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Joint marketing budget</div>
+          <div class="tier-item"><span class="tier-check">✓</span> Priority stock allocation</div>
+        </div>
+      </div>
+
+    </div>
+
+    <style>
+      @media (min-width: 768px) { .grid-3-auto { grid-template-columns: repeat(3, 1fr) !important; } }
+    </style>
+
+  </div>
+</section>
+
+
+<!-- PROCESS STEPS -->
+<section class="section-py section-light">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>How to Join</div>
+      <h2 class="section-title" data-animate data-delay="100">Simple 4-Step<br/><span class="text-navy">Onboarding Process</span></h2>
+    </div>
+
+    <div class="process-steps" data-animate>
+      <div class="process-step">
+        <div class="step-number">01</div>
+        <div class="step-title">Submit Inquiry</div>
+        <div class="step-desc">Fill the dealer inquiry form below with your business details and area of operation.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">02</div>
+        <div class="step-title">Evaluation</div>
+        <div class="step-desc">Our sales team reviews your inquiry and contacts you within 48 hours for a discussion.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">03</div>
+        <div class="step-title">Agreement</div>
+        <div class="step-desc">Formalise the dealership with a simple dealer agreement covering terms and territory.</div>
+      </div>
+      <div class="process-step">
+        <div class="step-number">04</div>
+        <div class="step-title">Launch</div>
+        <div class="step-desc">Receive your starter stock, POS materials, training, and begin selling Serafix® products.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- DEALER INQUIRY FORM -->
+<section class="section-py" id="inquire">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr;gap:64px;align-items:start;" class="about-split">
+
+      <div data-animate>
+        <div class="section-label">Apply Now</div>
+        <h2 class="section-title">Dealer<br/><span class="text-navy">Inquiry Form</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+
+        <p style="margin-bottom:28px;">Fill in your business details and we'll get back to you within 2 business days to discuss how we can work together.</p>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;background:rgba(26,35,126,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.78rem;color:var(--gray-400);">Call us directly</div>
+              <div style="font-weight:600;color:var(--navy);">+91-9540039312</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:36px;height:36px;background:rgba(26,35,126,0.08);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div style="font-size:0.78rem;color:var(--gray-400);">Email us</div>
+              <div style="font-weight:600;color:var(--navy);">viprabondingsolutions@gmail.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:40px;padding:24px;background:rgba(201,160,52,0.06);border:1px solid rgba(201,160,52,0.2);border-radius:var(--radius-lg);">
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:8px;">Response Time</div>
+          <p style="font-size:0.88rem;color:var(--gray-600);">We aim to respond to all dealer inquiries within <strong>48 business hours</strong>. Our sales team will call you to discuss your requirements and territory.</p>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div class="dealer-form-card">
+          <div style="margin-bottom:32px;">
+            <h3 style="font-family:var(--font-heading);font-size:1.5rem;color:var(--dark);margin-bottom:6px;">Submit Dealer Inquiry</h3>
+            <p style="font-size:0.88rem;color:var(--gray-400);">All fields marked with * are required.</p>
+          </div>
+
+          <form data-form="dealer" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-control" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Mobile Number *</label>
+                <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-control" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Business / Firm Name *</label>
+              <input type="text" class="form-control" placeholder="Your business name" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">City *</label>
+                <input type="text" class="form-control" placeholder="City" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">State *</label>
+                <input type="text" class="form-control" placeholder="State" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Current Business Type *</label>
+              <select class="form-control" required>
+                <option value="">Select business type</option>
+                <option>Building Materials Retailer</option>
+                <option>Hardware Store</option>
+                <option>Tiles & Sanitary Showroom</option>
+                <option>Construction Chemical Distributor</option>
+                <option>General Merchant</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Partnership Level Interested In</label>
+              <select class="form-control">
+                <option value="">Select level</option>
+                <option>Authorised Dealer</option>
+                <option>Premium Dealer</option>
+                <option>Regional Distributor</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Monthly Volume Estimate (Bags)</label>
+              <select class="form-control">
+                <option value="">Select estimated volume</option>
+                <option>Under 50 bags/month</option>
+                <option>50–200 bags/month</option>
+                <option>200–500 bags/month</option>
+                <option>500–1000 bags/month</option>
+                <option>1000+ bags/month</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Additional Message</label>
+              <textarea class="form-control" placeholder="Tell us about your business, area coverage, or any specific questions..." style="min-height:100px;"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+              Submit Dealer Inquiry
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;" data-animate>Ready to Build a Profitable Business with Serafix®?</h2>
+      <p style="font-size:1rem;max-width:500px;margin:0 auto 40px;" data-animate data-delay="100">Join India's growing network of Serafix® partners and ride the construction boom with a brand professionals trust.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="200">
+        <a href="#inquire" class="btn btn-secondary btn-lg">Apply Now</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Sales Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;"><span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:.5rem;color:var(--red);">®</sup></div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">A Vipra Bonding Solutions (VBS) brand. Manufacturing premium construction adhesives since 2009.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Dealer Inquiries</strong><a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

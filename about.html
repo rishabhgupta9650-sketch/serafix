@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Serafix® | Vipra Bonding Solutions — Our Story & Vision</title>
+  <meta name="description" content="Serafix® is manufactured by VBS — Vipra Bonding Solutions. Learn about our 15+ years of adhesive manufacturing excellence, quality commitments, and vision." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .timeline { position: relative; padding: 0; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--navy), var(--red));
+    }
+    @media (min-width: 768px) {
+      .timeline::before { left: 50%; transform: translateX(-1px); }
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 32px;
+      margin-bottom: 48px;
+      padding-left: 32px;
+    }
+    @media (min-width: 768px) {
+      .timeline-item { padding-left: 0; }
+      .timeline-item:nth-child(even) { flex-direction: row-reverse; }
+      .timeline-item:nth-child(even) .timeline-content { text-align: right; }
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -9px;
+      width: 20px;
+      height: 20px;
+      background: var(--navy);
+      border: 3px solid var(--red);
+      border-radius: 50%;
+      flex-shrink: 0;
+      top: 4px;
+    }
+    @media (min-width: 768px) {
+      .timeline-dot {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin-top: 4px;
+        flex-shrink: 0;
+      }
+    }
+
+    .timeline-content {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-sm);
+      flex: 1;
+    }
+
+    .timeline-year {
+      font-family: var(--font-label);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+
+    .timeline-title {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 640px) {
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .values-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .value-card {
+      padding: 32px 24px;
+      text-align: center;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .value-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--navy);
+    }
+
+    .value-icon {
+      width: 64px;
+      height: 64px;
+      background: var(--gradient-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .value-icon svg { width: 28px; height: 28px; color: var(--white); }
+
+    .value-title {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    @media (min-width: 768px) {
+      .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .leadership-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .leader-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .leader-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+    .leader-img {
+      height: 220px;
+      background: var(--gradient-navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .leader-initials {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .leader-body { padding: 24px; }
+
+    .leader-name {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .leader-role {
+      font-family: var(--font-label);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .vm-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .vm-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .vm-card {
+      padding: 40px 32px;
+      border-radius: var(--radius-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .vm-card.vision { background: var(--gradient-navy); }
+    .vm-card.mission { background: linear-gradient(135deg, #0D1554, #1B2891); }
+    .vm-card.values { background: linear-gradient(135deg, #0A1520, #0D3050); }
+
+    .vm-label {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .vm-title {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .vm-text {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link active">About</a>
+        <a href="products.html"     class="nav-link">Products</a>
+        <a href="applications.html" class="nav-link">Applications</a>
+        <a href="quality.html"      class="nav-link">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="mobileNav">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link">Home</a>
+      <a href="about.html"        class="nav-mobile-link active">About Us</a>
+      <a href="products.html"     class="nav-mobile-link">Products</a>
+      <a href="applications.html" class="nav-mobile-link">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:var(--white);">About Us</span>
+      </div>
+      <div class="section-label" data-animate>Our Story</div>
+      <h1 data-animate data-delay="100">Built to Bond.<br/>Built to Last.</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:600px;line-height:1.75;" data-animate data-delay="200">
+        Serafix® is more than an adhesive brand — it's the result of 15+ years of manufacturing passion, technical expertise, and an unwavering commitment to quality.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- VISION, MISSION, VALUES -->
+<section class="section-py" style="background:var(--dark);">
+  <div class="container">
+    <div class="vm-grid">
+
+      <div class="vm-card vision" data-animate>
+        <div class="vm-label">Our Vision</div>
+        <div class="vm-title">To be India's Most Trusted Construction Adhesive Brand</div>
+        <div class="vm-text">We envision a future where every tile, stone, and surface in India is bonded with products that professionals trust, and homeowners adore — a Serafix® bond on every project.</div>
+      </div>
+
+      <div class="vm-card mission" data-animate data-delay="150">
+        <div class="vm-label">Our Mission</div>
+        <div class="vm-title">Engineering Solutions That Exceed Expectations</div>
+        <div class="vm-text">To develop and deliver high-performance adhesive solutions using advanced formulation science, rigorous quality control, and unparalleled technical support to our customers.</div>
+      </div>
+
+      <div class="vm-card values" data-animate data-delay="300">
+        <div class="vm-label">Our Values</div>
+        <div class="vm-title">Quality. Integrity. Innovation.</div>
+        <div class="vm-text">We hold ourselves to the highest standards in everything: raw material sourcing, manufacturing precision, customer service, and environmental responsibility. Every bag carries our promise.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- COMPANY STORY -->
+<section class="section-py">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr;gap:64px;align-items:center;" class="about-split">
+
+      <div data-animate>
+        <div class="section-label">The Serafix® Story</div>
+        <h2 class="section-title">15 Years of<br/><span class="text-navy">Manufacturing Excellence</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+
+        <p style="margin-bottom:16px;">We are the leading manufacturer of wide range of adhesives used for fixing various tiles and stones to any surface. Our adhesives have high strength that doesn't let any tile to loose its bond.</p>
+
+        <p style="margin-bottom:16px;">We also manufacture grouts, epoxy and cleaners that enhance the beauty of the tiles. We ensure and commit towards high quality products formulated using new standards and technologies.</p>
+
+        <p style="margin-bottom:16px;">Our products are in compliance with the Indian &amp; European standards developed by the Bureau of Indian standards &amp; the European standards organisation respectively.</p>
+
+        <p style="margin-bottom:28px;">Serafix® is the flagship brand of Vipra Bonding Solutions (VBS), headquartered in Delhi. Our products are manufactured as per IS:15477:2019 and EN:12004 standards and are trusted by contractors, architects, and builders across India.</p>
+
+        <a href="contact.html" class="btn btn-primary">Work With Us</a>
+      </div>
+
+      <div data-animate data-delay="200" style="position:relative;">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
+          alt="Manufacturing facility"
+          style="width:100%;height:500px;object-fit:cover;border-radius:20px;"
+          loading="lazy"
+        />
+        <div style="position:absolute;bottom:-20px;left:24px;background:var(--gradient-gold);padding:20px 24px;border-radius:14px;box-shadow:0 12px 40px rgba(201,160,52,0.4);">
+          <div style="font-family:var(--font-heading);font-size:2rem;font-weight:700;color:var(--dark);line-height:1;">EST. 2009</div>
+          <div style="font-family:var(--font-label);font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(20,20,20,0.7);">Vipra Bonding Solutions</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- COMPANY MILESTONES -->
+<section class="section-py section-light">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:64px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Our Journey</div>
+      <h2 class="section-title" data-animate data-delay="100">Milestones That<br/><span class="text-navy">Define Us</span></h2>
+    </div>
+
+    <div class="timeline" style="max-width:720px;margin:0 auto;">
+
+      <div class="timeline-item" data-animate style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2009</div>
+          <div class="timeline-title">Foundation of VBS</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">Vipra Bonding Solutions was established with a vision to manufacture world-class construction adhesives for the Indian market.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate data-delay="100" style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2011</div>
+          <div class="timeline-title">Launch of Serafix® Brand</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">The Serafix® brand was officially launched with our first two tile adhesive products, meeting BIS quality standards from day one.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate data-delay="200" style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-title">ISO 9001 Certification</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">Achieved ISO 9001 quality management certification, validating our manufacturing processes and quality control systems.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate data-delay="300" style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-title">Product Range Expansion</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">Launched the SF 735 multipurpose adhesive and SF 755 highly-flexible tile adhesive to address growing market demand.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate data-delay="400" style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2020</div>
+          <div class="timeline-title">Pan-India Dealer Network</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">Expanded our dealer network to 50+ partners across India, ensuring availability in all major construction markets.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-animate data-delay="500" style="position:relative;">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-year">2024–25</div>
+          <div class="timeline-title">Next-Generation Formulations</div>
+          <p style="font-size:0.9rem;color:var(--gray-600);">Launched our SF 755 (Type-4T S2/C2TE S2) and SF-217 Waterproof Epoxy Grout, and established our online presence with Serafix.in.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CORE VALUES -->
+<section class="section-py">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>What Drives Us</div>
+      <h2 class="section-title" data-animate data-delay="100">Our Core<br/><span class="text-navy">Principles</span></h2>
+    </div>
+
+    <div class="values-grid">
+
+      <div class="value-card" data-animate>
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="value-title">Uncompromising Quality</div>
+        <p style="font-size:0.88rem;color:var(--gray-600);">Raw materials are sourced only from approved suppliers. Every batch undergoes multi-stage quality checks before dispatch.</p>
+      </div>
+
+      <div class="value-card" data-animate data-delay="100">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div class="value-title">Honest Engineering</div>
+        <p style="font-size:0.88rem;color:var(--gray-600);">Our datasheets state real performance data from actual tests — not marketing numbers. You get exactly what we promise.</p>
+      </div>
+
+      <div class="value-card" data-animate data-delay="200">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="value-title">Continuous Innovation</div>
+        <p style="font-size:0.88rem;color:var(--gray-600);">Our R&D team constantly works on next-generation formulations to address evolving construction methods and materials.</p>
+      </div>
+
+      <div class="value-card" data-animate data-delay="300">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="value-title">Customer Partnership</div>
+        <p style="font-size:0.88rem;color:var(--gray-600);">We see our dealers, contractors, and applicators as long-term partners — not just customers. Their success is our success.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- MANUFACTURING EXCELLENCE -->
+<section class="section-py" style="background:var(--gradient-dark);">
+  <div class="container">
+
+    <div style="display:grid;grid-template-columns:1fr;gap:64px;align-items:center;" class="about-split">
+
+      <div data-animate>
+        <div class="section-label" style="color:var(--red);">Manufacturing</div>
+        <h2 class="section-title" style="color:var(--white);">State-of-the-Art<br/><span style="color:var(--red);">Production Facility</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+
+        <p style="color:rgba(255,255,255,0.65);margin-bottom:16px;">We are committed to manufacture quality products — our manufacturing facilities and operational processes are driven by the highest standards of quality and excellence.</p>
+
+        <p style="color:rgba(255,255,255,0.65);margin-bottom:32px;">We have developed our product standards as per the Indian standards IS:15477:2019 and the European standard EN:12004. Raw materials are tested upon receipt and finished products are batch-coded for full traceability.</p>
+
+        <ul style="display:flex;flex-direction:column;gap:14px;">
+          <li style="display:flex;align-items:center;gap:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">
+            <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;"></span>
+            Automated gravimetric batching system
+          </li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">
+            <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;"></span>
+            In-house testing laboratory — tensile, shear, slip resistance
+          </li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">
+            <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;"></span>
+            Full batch traceability and documentation
+          </li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">
+            <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;"></span>
+            ISO 9001:2015 certified quality management
+          </li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:0.95rem;color:rgba(255,255,255,0.8);">
+            <span style="width:8px;height:8px;background:var(--red);border-radius:50%;flex-shrink:0;"></span>
+            Capacity for large-volume project supply
+          </li>
+        </ul>
+      </div>
+
+      <div data-animate data-delay="200">
+        <img
+          src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=900&q=80"
+          alt="Manufacturing quality control"
+          style="width:100%;height:460px;object-fit:cover;border-radius:20px;"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;" data-animate>
+        Ready to specify Serafix® on your next project?
+      </h2>
+      <p style="font-size:1rem;max-width:500px;margin:0 auto 40px;" data-animate data-delay="100">
+        Our technical team is available to assist with product selection, application guidance, and project support.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="200">
+        <a href="products.html" class="btn btn-secondary btn-lg">Explore Products</a>
+        <a href="contact.html"  class="btn btn-outline   btn-lg">Contact Technical Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;"><span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:.5rem;color:var(--red);">®</sup></div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">Serafix® by Vipra Bonding Solutions (VBS). Leading manufacturer of tile adhesives, grouts and epoxy. IS:15477:2019 &amp; EN:12004 compliant.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications — Serafix® | Tile, Marble, Exterior & Industrial Bonding</title>
+  <meta name="description" content="Discover where Serafix® adhesives are used — residential flooring, marble & granite, commercial facades, swimming pools, industrial floors, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .app-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (min-width: 1024px) {
+      .app-section { grid-template-columns: 1fr 1fr; }
+      .app-section.reverse { direction: rtl; }
+      .app-section.reverse > * { direction: ltr; }
+    }
+
+    .app-img {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .app-img img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .app-img-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: var(--navy-dark);
+      border: 1px solid rgba(211,47,47,0.2);
+      padding: 12px 20px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .app-products-used {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 24px;
+    }
+
+    .app-bullet {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .app-bullet-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--red);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .app-bullet p {
+      font-size: 0.92rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .sector-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 640px) { .sector-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .sector-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .sector-card {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 280px;
+    }
+
+    .sector-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .sector-card:hover img { transform: scale(1.06); }
+
+    .sector-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,15,36,0.9) 0%, transparent 60%);
+    }
+
+    .sector-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+    }
+
+    .sector-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--navy);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .sector-icon svg { width: 20px; height: 20px; color: var(--red); }
+
+    .sector-name {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .sector-desc {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header id="navbar" class="scrolled">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html"        class="nav-link">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="products.html"     class="nav-link">Products</a>
+        <a href="applications.html" class="nav-link active">Applications</a>
+        <a href="quality.html"      class="nav-link">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="mobileNav">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link">Home</a>
+      <a href="about.html"        class="nav-mobile-link">About Us</a>
+      <a href="products.html"     class="nav-mobile-link">Products</a>
+      <a href="applications.html" class="nav-mobile-link active">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-content">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span>/</span>
+        <span style="color:var(--white);">Applications</span>
+      </div>
+      <div class="section-label" data-animate>Where We Perform</div>
+      <h1 data-animate data-delay="100">Serafix® in Action —<br/>Every Application</h1>
+      <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;max-width:600px;line-height:1.75;" data-animate data-delay="200">
+        From luxurious marble lobbies to industrial plant floors — Serafix® adhesives are engineered to perform in every environment, on every surface.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION 1: Residential Flooring -->
+<section class="section-py" id="residential">
+  <div class="container">
+    <div class="app-section">
+
+      <div class="app-img" data-animate>
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Residential tile flooring" loading="lazy" />
+        <div class="app-img-badge">
+          <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);">Recommended</div>
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);">SF 705 / SF 711</div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div class="section-label">Residential</div>
+        <h2 class="section-title">Residential<br/><span class="text-navy">Flooring & Walls</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+        <p style="margin-bottom:20px;">Serafix® is the choice of professional tilers and home builders for residential projects. Our adhesives deliver long-lasting, beautiful results on all types of interior floor and wall tiles.</p>
+
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Living areas and bedrooms:</strong> SF 705 and SF 711 bond ceramic and vitrified tiles with reliable grip that lasts decades.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Wet areas — bathrooms & kitchens:</strong> SF 711 and SF 755 resist water penetration in wet area applications.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Living room feature walls:</strong> Non-sag formulation enables vertical wall installation without slippage.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Balconies and terraces:</strong> SF 755 provides highly-flexible bonding for outdoor exposed areas.</p></div>
+
+        <div class="app-products-used">
+          <span class="tag tag-blue">SF 705</span>
+          <span class="tag tag-blue">SF 711</span>
+          <span class="tag tag-blue">SF 755</span>
+        </div>
+        <a href="products.html" class="btn btn-primary btn-sm">View Recommended Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION 2: Marble & Stone -->
+<section class="section-py section-light" id="marble">
+  <div class="container">
+    <div class="app-section reverse">
+
+      <div class="app-img" data-animate>
+        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=900&q=80" alt="Marble installation" loading="lazy" />
+        <div class="app-img-badge">
+          <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);">Recommended</div>
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);">SF 735 / SF 755</div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div class="section-label">Natural Stone</div>
+        <h2 class="section-title">Marble, Granite<br/><span class="text-navy">& Natural Stone</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+        <p style="margin-bottom:20px;">Natural stone demands a specialist adhesive. SF 735 and SF 755 protect the visual integrity of marble and granite while delivering superior bond strength for heavy slabs.</p>
+
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Italian and Indian marble floors:</strong> SF 735 and SF 755 provide superior bond for heavy stone without staining.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Granite countertops and flooring:</strong> SF 735 handles heavy stone weights without delamination.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Travertine and sandstone:</strong> SF 755 (S2 class) provides flexibility and extended open time for porous stone.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Decorative stone wall cladding:</strong> Non-sag, high-bond adhesion for vertical stone installation.</p></div>
+
+        <div class="app-products-used">
+          <span class="tag tag-blue">SF 735</span>
+          <span class="tag tag-blue">SF 755</span>
+        </div>
+        <a href="products.html" class="btn btn-primary btn-sm">View Recommended Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION 3: Commercial & Large Format -->
+<section class="section-py" id="commercial">
+  <div class="container">
+    <div class="app-section">
+
+      <div class="app-img" data-animate>
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80" alt="Commercial building facade" loading="lazy" />
+        <div class="app-img-badge">
+          <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);">Recommended</div>
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);">SF 755</div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div class="section-label">Commercial & Exterior</div>
+        <h2 class="section-title">Commercial Buildings<br/><span class="text-navy">& Exterior Facades</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+        <p style="margin-bottom:20px;">SF 755 is the premium choice for large commercial projects requiring large-format tiles and exterior facade cladding. Its S1 flexibility class accommodates building movement without bond failure.</p>
+
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Exterior building facades:</strong> Weather-resistant, UV-stable adhesion for tiles and cladding on high-rise buildings.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Shopping malls and retail:</strong> Large-format porcelain tiles in high-traffic commercial areas demand superior bond strength.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Hotels and hospitality:</strong> Premium marble and stone lobbies, corridors, and amenity areas.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Underfloor heated systems:</strong> S1 flexibility absorbs thermal cycling movement without tile lifting.</p></div>
+
+        <div class="app-products-used">
+          <span class="tag tag-blue">SF 755</span>
+          <span class="tag tag-blue">SF 735</span>
+        </div>
+        <a href="products.html" class="btn btn-primary btn-sm">View Recommended Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION 4: Wet Areas & Pools -->
+<section class="section-py section-light" id="pools">
+  <div class="container">
+    <div class="app-section reverse">
+
+      <div class="app-img" data-animate>
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Swimming pool tile installation" loading="lazy" />
+        <div class="app-img-badge">
+          <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);">Recommended</div>
+          <div style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);">SF 755 / SF-217</div>
+        </div>
+      </div>
+
+      <div data-animate data-delay="200">
+        <div class="section-label">Wet Areas & Water Features</div>
+        <h2 class="section-title">Swimming Pools<br/><span class="text-navy">& Wet Installations</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+        <p style="margin-bottom:20px;">Water-immersed and constantly wet environments require adhesives with exceptional waterproofing and chemical resistance. SF 755 and SF-217 Epoxy Grout are engineered precisely for these demands.</p>
+
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Swimming pool interiors:</strong> SF-217 Epoxy Grout's 3-component epoxy system withstands continuous water immersion and pool chemicals.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Spa and jacuzzi installations:</strong> SF 755 and SF-217 resist hot water, chlorine, and salt in therapeutic water installations.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Water features and fountains:</strong> Durable bonding that maintains integrity in exposed water features.</p></div>
+        <div class="app-bullet"><div class="app-bullet-dot"></div><p><strong>Shower enclosures:</strong> SF 755 and SF-217 provide waterproofing under shower tiles.</p></div>
+
+        <div class="app-products-used">
+          <span class="tag tag-blue">SF 755</span>
+          <span class="tag tag-blue">SF-217 Epoxy Grout</span>
+        </div>
+        <a href="products.html" class="btn btn-primary btn-sm">View Recommended Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ALL SECTORS GRID -->
+<section class="section-py" style="background:var(--dark);">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="section-label" style="justify-content:center;" data-animate>All Sectors</div>
+      <h2 class="section-title" style="color:var(--white);" data-animate data-delay="100">Serafix® Across<br/><span style="color:var(--red);">Every Industry</span></h2>
+    </div>
+
+    <div class="sector-grid">
+
+      <div class="sector-card" data-animate>
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Residential" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="sector-name">Residential</div>
+          <div class="sector-desc">Homes, apartments, villas, and gated communities</div>
+        </div>
+      </div>
+
+      <div class="sector-card" data-animate data-delay="100">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Commercial" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="sector-name">Commercial</div>
+          <div class="sector-desc">Offices, retail, malls, hotels, and corporate spaces</div>
+        </div>
+      </div>
+
+      <div class="sector-card" data-animate data-delay="200">
+        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=600&q=80" alt="Industrial" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M17 20V4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v16"/><path d="M12 20v-8"/><path d="M8 8h8"/></svg></div>
+          <div class="sector-name">Industrial</div>
+          <div class="sector-desc">Factories, warehouses, processing plants</div>
+        </div>
+      </div>
+
+      <div class="sector-card" data-animate data-delay="300">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80" alt="Healthcare" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="sector-name">Healthcare</div>
+          <div class="sector-desc">Hospitals, clinics, laboratories, and clean rooms</div>
+        </div>
+      </div>
+
+      <div class="sector-card" data-animate data-delay="400">
+        <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=600&q=80" alt="Education" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="sector-name">Education</div>
+          <div class="sector-desc">Schools, colleges, universities, and training centers</div>
+        </div>
+      </div>
+
+      <div class="sector-card" data-animate data-delay="500">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Sports" loading="lazy" />
+        <div class="sector-overlay"></div>
+        <div class="sector-content">
+          <div class="sector-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg></div>
+          <div class="sector-name">Sports & Leisure</div>
+          <div class="sector-desc">Swimming pools, gyms, sports centers, spas</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:16px;" data-animate>Have a Specific Application in Mind?</h2>
+      <p style="font-size:1rem;max-width:500px;margin:0 auto 40px;" data-animate data-delay="100">
+        Our technical team can recommend the right Serafix® product for your specific substrate, environment, and performance requirements.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="200">
+        <a href="contact.html" class="btn btn-secondary btn-lg">Get Technical Advice</a>
+        <a href="products.html" class="btn btn-outline btn-lg">Explore Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;"><span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:.5rem;color:var(--red);">®</sup></div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">A Vipra Bonding Solutions (VBS) brand. Manufacturing premium construction adhesives since 2009.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="social-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="footer-contact-text"><strong>Phone</strong><a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="footer-contact-text"><strong>Email</strong><a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serafix® — Fix it Forever | Premium Tile & Stone Adhesives by VBS</title>
+  <meta name="description" content="Serafix® by VBS — Fix it Forever. Premium tile adhesives, grouts and epoxy solutions trusted by architects, builders, and contractors across India. IS:15477:2019 &amp; EN:12004 compliant." />
+  <meta name="keywords" content="tile adhesive, stone adhesive, marble fixing, granite adhesive, construction adhesive, Serafix, VBS, India, ceramic tile glue" />
+  <meta property="og:title" content="Serafix® — Premium Industrial Adhesives" />
+  <meta property="og:description" content="Engineering bonds that last a lifetime. Premium tile & stone adhesives by Vipra Bonding Solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://serafix.in" />
+  <link rel="canonical" href="https://serafix.in" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Homepage-specific styles */
+    .hero-home {
+      min-height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1920&q=80');
+    }
+
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-split { grid-template-columns: 1fr 1fr; }
+    }
+
+    .hero-visual {
+      display: none;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-visual { display: block; }
+    }
+
+    .hero-visual-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 32px;
+      animation: fadeUp 1s ease 0.6s both;
+    }
+
+    .hero-stat-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .hero-stat-box {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-stat-n {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero-stat-n span { color: var(--red); }
+
+    .hero-stat-l {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+
+    /* Why Choose Grid */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* Applications Grid */
+    .app-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 640px) {
+      .app-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1024px) {
+      .app-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+      }
+      .app-card:first-child { grid-row: span 2; height: auto; min-height: 640px; }
+    }
+
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 640px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 1200px) {
+      .products-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* About split */
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @media (min-width: 1024px) {
+      .about-split { grid-template-columns: 1fr 1fr; }
+    }
+
+    .about-img {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .about-img img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: 28px;
+      right: -16px;
+      background: var(--gradient-gold);
+      padding: 20px 28px;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(201,160,52,0.4);
+    }
+
+    .about-img-badge .big {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1;
+    }
+
+    .about-img-badge .small {
+      font-family: var(--font-label);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--dark);
+      opacity: 0.7;
+    }
+
+    .cert-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .cert-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(26,35,126,0.06);
+      border: 1px solid rgba(26,35,126,0.12);
+      border-radius: 100px;
+      font-family: var(--font-label);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+
+    .cert-chip svg {
+      width: 14px;
+      height: 14px;
+      color: var(--red);
+      flex-shrink: 0;
+    }
+
+    /* Partner logos */
+    .partners-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 0;
+    }
+
+    .partner-tag {
+      font-family: var(--font-label);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      padding: 10px 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 100px;
+    }
+
+    /* Product icon placeholders */
+    .product-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-navy);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px auto 0;
+    }
+
+    .product-icon svg {
+      width: 40px;
+      height: 40px;
+      color: var(--white);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header id="navbar" class="transparent">
+  <div class="container">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Serafix Home">
+        <svg width="160" height="56" viewBox="0 0 160 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g transform="translate(0, 2)">
+            <path d="M6 4 L11 16 L16 4" stroke="#D32F2F" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+            <rect x="18" y="7" width="4" height="10" fill="#1A237E"/>
+            <rect x="23" y="5" width="4" height="12" fill="#1A237E"/>
+            <rect x="28" y="8" width="3" height="9" fill="#D32F2F"/>
+            <rect x="32" y="6" width="4" height="11" fill="#1A237E"/>
+            <rect x="37" y="9" width="3" height="8" fill="#1A237E"/>
+            <line x1="5" y1="17" x2="41" y2="17" stroke="#1A237E" stroke-width="1.5"/>
+          </g>
+          <text x="0" y="42" font-family="'Rajdhani', sans-serif" font-weight="700" font-size="22" fill="#1A237E" letter-spacing="1">SERAFIX</text>
+          <g opacity="0.9">
+            <line x1="131" y1="24" x2="152" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+            <line x1="152" y1="24" x2="131" y2="44" stroke="#D32F2F" stroke-width="5" stroke-linecap="round"/>
+          </g>
+          <text x="154" y="28" font-family="'Inter', sans-serif" font-size="7" fill="#1A237E">TM</text>
+          <text x="2" y="54" font-family="'Georgia', serif" font-style="italic" font-size="9" fill="#1A237E" opacity="0.7">Fix it Forever...</text>
+        </svg>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html"        class="nav-link active">Home</a>
+        <a href="about.html"        class="nav-link">About</a>
+        <a href="products.html"     class="nav-link">Products</a>
+        <a href="applications.html" class="nav-link">Applications</a>
+        <a href="quality.html"      class="nav-link">Quality</a>
+        <a href="contact.html"      class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+
+      <!-- Hamburger -->
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div class="nav-mobile" id="mobileNav" aria-hidden="true">
+    <div class="nav-mobile-links">
+      <a href="index.html"        class="nav-mobile-link active">Home</a>
+      <a href="about.html"        class="nav-mobile-link">About Us</a>
+      <a href="products.html"     class="nav-mobile-link">Products</a>
+      <a href="applications.html" class="nav-mobile-link">Applications</a>
+      <a href="quality.html"      class="nav-mobile-link">Quality & Certifications</a>
+      <a href="dealers.html"      class="nav-mobile-link">Become a Dealer</a>
+      <a href="contact.html"      class="nav-mobile-link">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+
+<!-- ===================== HERO ===================== -->
+<section class="hero hero-home" aria-label="Hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <div class="hero-split">
+
+      <!-- Left: Copy -->
+      <div>
+        <div class="hero-badge" data-animate>
+          <span class="dot"></span>
+          India's Premium Adhesive Brand
+        </div>
+
+        <h1 data-animate data-delay="100">
+          Engineering<br/>
+          Bonds That<br/>
+          <span class="highlight">Last a Lifetime</span>
+        </h1>
+
+        <p class="hero-sub" data-animate data-delay="200">
+          Premium tile adhesives and construction bonding solutions, crafted with precision and trusted by architects, builders, and contractors across India.
+        </p>
+
+        <div class="hero-actions" data-animate data-delay="300">
+          <a href="products.html" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Explore Products
+          </a>
+          <a href="dealers.html" class="btn btn-outline btn-lg">
+            Become a Dealer
+          </a>
+        </div>
+
+        <!-- Trust chips -->
+        <div style="display:flex;flex-wrap:wrap;gap:10px;" data-animate data-delay="400">
+          <div class="cert-chip" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            ISO 9001:2015 Certified
+          </div>
+          <div class="cert-chip" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            BIS Approved
+          </div>
+          <div class="cert-chip" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.7);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Made in India
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual card -->
+      <div class="hero-visual">
+        <div class="hero-visual-card">
+          <div style="border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:16px;margin-bottom:16px;">
+            <div style="font-family:var(--font-label);font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:4px;">Featured Product</div>
+            <div style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;color:var(--white);">SF 755</div>
+            <div style="font-size:0.85rem;color:rgba(255,255,255,0.55);">Highly-Flexible Versatile Tile Adhesive · C2TE S2</div>
+          </div>
+          <div style="display:flex;gap:12px;margin-bottom:16px;">
+            <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;text-align:center;">
+              <div style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--red);">20 kg</div>
+              <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Pack Size</div>
+            </div>
+            <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;text-align:center;">
+              <div style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--red);">C2TE S2</div>
+              <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">EN Standard</div>
+            </div>
+            <div style="flex:1;background:rgba(255,255,255,0.05);border-radius:12px;padding:16px;text-align:center;">
+              <div style="font-family:var(--font-heading);font-size:1.4rem;font-weight:700;color:var(--red);">S2</div>
+              <div style="font-family:var(--font-label);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);">Flexibility</div>
+            </div>
+          </div>
+          <div class="hero-stat-row">
+            <div class="hero-stat-box">
+              <div class="hero-stat-n">15<span>+</span></div>
+              <div class="hero-stat-l">Years Experience</div>
+            </div>
+            <div class="hero-stat-box">
+              <div class="hero-stat-n">500<span>+</span></div>
+              <div class="hero-stat-l">Projects Completed</div>
+            </div>
+          </div>
+          <a href="products.html" style="display:flex;align-items:center;justify-content:center;gap:8px;margin-top:16px;padding:14px;background:var(--navy);border-radius:12px;font-family:var(--font-label);font-weight:700;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);transition:var(--transition);"
+             onmouseover="this.style.background='var(--red)'" onmouseout="this.style.background='var(--navy)'">
+            View All Products
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+
+<!-- ===================== STATS BAR ===================== -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-animate>
+        <div class="stat-number">
+          <span data-counter="15" data-suffix="+">15+</span>
+        </div>
+        <div class="stat-label">Years of Excellence</div>
+      </div>
+      <div class="stat-item" data-animate data-delay="100">
+        <div class="stat-number">
+          <span data-counter="500" data-suffix="+">500+</span>
+        </div>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item" data-animate data-delay="200">
+        <div class="stat-number">
+          <span data-counter="50" data-suffix="+">50+</span>
+        </div>
+        <div class="stat-label">Dealer Network</div>
+      </div>
+      <div class="stat-item" data-animate data-delay="300">
+        <div class="stat-number">
+          <span data-counter="12" data-suffix="">12</span>
+          <span class="suffix" style="font-size:1.5rem;">+</span>
+        </div>
+        <div class="stat-label">Product Variants</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===================== PRODUCTS ===================== -->
+<section class="section-py bg-light" id="products">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Our Product Range</div>
+      <h2 class="section-title" data-animate data-delay="100">Engineered for Every<br/><span class="text-navy">Bonding Challenge</span></h2>
+      <p class="section-subtitle mx-auto" data-animate data-delay="200">From standard ceramic tiles to large-format stone slabs, our adhesive range covers the complete spectrum of construction bonding needs.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- Product 1: SF 705 -->
+      <div class="product-card" data-animate>
+        <div class="product-card-img">
+          <span class="product-card-badge">Bestseller</span>
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">SF 705</div>
+          <div class="product-card-desc">Premium floor tile adhesive for ceramic tiles. Good bonding strength, water resistance, easy to use. Covers 55–60 sq.ft per bag.</div>
+          <div class="product-card-tags">
+            <span class="tag tag-blue">Type-1T / C1T</span>
+            <span class="tag">Floor Tiles</span>
+            <span class="tag">Ceramic</span>
+          </div>
+        </div>
+        <div class="product-card-footer">
+          <a href="products/sf-705.html" class="btn btn-outline-navy btn-sm">Learn More</a>
+          <span style="font-family:var(--font-label);font-size:0.7rem;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">20 kg Bag</span>
+        </div>
+      </div>
+
+      <!-- Product 2: SF 711 -->
+      <div class="product-card" data-animate data-delay="100">
+        <div class="product-card-img">
+          <span class="product-card-badge" style="background:var(--red);">Popular</span>
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">SF 711</div>
+          <div class="product-card-desc">Superior tile adhesive for floor and wall tiles. Superior bonding, water resistant, available in grey and white. Covers 55–60 sq.ft per bag.</div>
+          <div class="product-card-tags">
+            <span class="tag tag-blue">Type-1T / C1T</span>
+            <span class="tag">Floor & Wall</span>
+            <span class="tag">Grey/White</span>
+          </div>
+        </div>
+        <div class="product-card-footer">
+          <a href="products/sf-711.html" class="btn btn-outline-navy btn-sm">Learn More</a>
+          <span style="font-family:var(--font-label);font-size:0.7rem;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">20 kg Bag</span>
+        </div>
+      </div>
+
+      <!-- Product 3: SF 722 -->
+      <div class="product-card" data-animate data-delay="200">
+        <div class="product-card-img">
+          <span class="product-card-badge" style="background:var(--navy);">High Strength</span>
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">SF 722</div>
+          <div class="product-card-desc">High-strength non-skid tile adhesive for high-traffic floors. Non-slip surface, improved bonding, suitable for heavy-duty applications.</div>
+          <div class="product-card-tags">
+            <span class="tag tag-blue">Type-2T / C2TE</span>
+            <span class="tag">Non-Skid</span>
+            <span class="tag">High Traffic</span>
+          </div>
+        </div>
+        <div class="product-card-footer">
+          <a href="products/sf-722.html" class="btn btn-outline-navy btn-sm">Learn More</a>
+          <span style="font-family:var(--font-label);font-size:0.7rem;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">20 kg Bag</span>
+        </div>
+      </div>
+
+      <!-- Product 4: SF 735 -->
+      <div class="product-card" data-animate data-delay="300">
+        <div class="product-card-img">
+          <span class="product-card-badge" style="background:var(--charcoal);">Multipurpose</span>
+          <div class="product-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-name">SF 735</div>
+          <div class="product-card-desc">Superior multipurpose tile adhesive for porcelain, granite, marble. Flexible S1 class. Suitable for floor and wall tiles including natural stone.</div>
+          <div class="product-card-tags">
+            <span class="tag tag-blue">Type-3T S1 / C2TE S1</span>
+            <span class="tag">Porcelain</span>
+            <span class="tag">Marble</span>
+          </div>
+        </div>
+        <div class="product-card-footer">
+          <a href="products/sf-735.html" class="btn btn-outline-navy btn-sm">Learn More</a>
+          <span style="font-family:var(--font-label);font-size:0.7rem;color:var(--gray-400);letter-spacing:0.1em;text-transform:uppercase;">20 kg Bag</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center" style="margin-top:48px;" data-animate>
+      <a href="products.html" class="btn btn-primary btn-lg">
+        View Complete Product Range
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== ABOUT SPLIT ===================== -->
+<section class="section-py" id="about">
+  <div class="container">
+    <div class="about-split">
+
+      <!-- Image side -->
+      <div class="about-img" data-animate>
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80"
+          alt="Serafix manufacturing facility"
+          loading="lazy"
+        />
+        <div class="about-img-badge">
+          <div class="big">15+</div>
+          <div class="small">Years of<br/>Manufacturing</div>
+        </div>
+      </div>
+
+      <!-- Text side -->
+      <div data-animate data-delay="200">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Built on Engineering.<br/><span class="text-navy">Trusted by Professionals.</span></h2>
+        <div class="divider-gold" style="margin-bottom:24px;"></div>
+
+        <p style="margin-bottom:16px;">We are the leading manufacturer of wide range of adhesives used for fixing various tiles and stones to any surface. Our adhesives have high strength that doesn't let any tile to loose its bond.</p>
+
+        <p style="margin-bottom:16px;">We also manufacture grouts, epoxy and cleaners that enhance the beauty of the tiles. We ensure and commit towards high quality products formulated using new standards and technologies.</p>
+
+        <p style="margin-bottom:28px;">Our products are in compliance with the Indian &amp; European standards developed by the Bureau of Indian standards &amp; the European standards organisation respectively.</p>
+
+        <div class="cert-strip">
+          <div class="cert-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            ISO 9001:2015
+          </div>
+          <div class="cert-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            BIS Certified
+          </div>
+          <div class="cert-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            REACH Compliant
+          </div>
+          <div class="cert-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            EN 12004 Tested
+          </div>
+        </div>
+
+        <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">Our Story</a>
+          <a href="quality.html" class="btn btn-outline-navy">Quality Standards</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="section-py section-navy" style="background:var(--gradient-dark);">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Why Serafix®</div>
+      <h2 class="section-title" style="color:var(--white);" data-animate data-delay="100">The Serafix<br/><span style="color:var(--red);">Advantage</span></h2>
+      <p class="section-subtitle mx-auto" style="color:rgba(255,255,255,0.6);" data-animate data-delay="200">Six pillars that make Serafix® the preferred choice for discerning construction professionals.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate>
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">International Quality Standards</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">Every batch manufactured to EN 12004, IS 15477, and ISO standards. Third-party tested for consistent, reliable performance.</div>
+      </div>
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate data-delay="100">
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">Superior Bond Strength</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">Tensile adhesion strength exceeding 1.5 N/mm², delivering bonds that withstand thermal cycling, vibration, and heavy loads.</div>
+      </div>
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate data-delay="200">
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">Extended Open Time</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">25–30 minute open time gives applicators sufficient working window, reducing waste and improving installation accuracy on site.</div>
+      </div>
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate data-delay="300">
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">Dedicated Technical Support</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">Our team of field engineers provide on-site application support, training, and troubleshooting for contractors and developers.</div>
+      </div>
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate data-delay="400">
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">Pan-India Supply Chain</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">A robust dealer and distributor network ensures product availability when and where your project needs it, without delays.</div>
+      </div>
+
+      <div class="feature-card" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);" data-animate data-delay="500">
+        <div class="feature-icon" style="background:rgba(211,47,47,0.1);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color:var(--red)!important;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="feature-title" style="color:var(--white);">Consistent Formulation</div>
+        <div class="feature-desc" style="color:rgba(255,255,255,0.55);">Every bag of Serafix® is manufactured using precisely controlled raw material ratios, ensuring batch-to-batch consistency.</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== APPLICATIONS ===================== -->
+<section class="section-py" id="applications">
+  <div class="container">
+
+    <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:48px;">
+      <div>
+        <div class="section-label" data-animate>Applications</div>
+        <h2 class="section-title" data-animate data-delay="100">Where Serafix® Works<br/><span class="text-navy">Its Magic</span></h2>
+      </div>
+      <a href="applications.html" class="btn btn-outline-navy" data-animate data-delay="200">
+        View All Applications
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="app-grid">
+
+      <div class="app-card" data-animate>
+        <div class="app-card-img" style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="app-card-overlay"></div>
+        <div class="app-card-content">
+          <div class="app-card-cat">Interior</div>
+          <div class="app-card-title">Residential Flooring</div>
+          <div class="app-card-desc">High-performance adhesives for ceramic, vitrified, and marble floor tiles in homes and apartments.</div>
+        </div>
+      </div>
+
+      <div class="app-card" data-animate data-delay="100">
+        <div class="app-card-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="app-card-overlay"></div>
+        <div class="app-card-content">
+          <div class="app-card-cat">Natural Stone</div>
+          <div class="app-card-title">Marble & Granite</div>
+          <div class="app-card-desc">Anti-stain, white adhesive formulas that preserve the natural beauty of marble, granite, and limestone.</div>
+        </div>
+      </div>
+
+      <div class="app-card" data-animate data-delay="200">
+        <div class="app-card-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="app-card-overlay"></div>
+        <div class="app-card-content">
+          <div class="app-card-cat">Commercial</div>
+          <div class="app-card-title">Exterior Facades</div>
+          <div class="app-card-desc">Flexible, weather-resistant adhesives for large-format cladding on commercial buildings and towers.</div>
+        </div>
+      </div>
+
+      <div class="app-card" data-animate data-delay="300">
+        <div class="app-card-img" style="background-image:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="app-card-overlay"></div>
+        <div class="app-card-content">
+          <div class="app-card-cat">Infrastructure</div>
+          <div class="app-card-title">Swimming Pools</div>
+          <div class="app-card-desc">Waterproof, chemically resistant adhesives for pool interiors, spas, and water feature installations.</div>
+        </div>
+      </div>
+
+      <div class="app-card" data-animate data-delay="400">
+        <div class="app-card-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80');"></div>
+        <div class="app-card-overlay"></div>
+        <div class="app-card-content">
+          <div class="app-card-cat">Residential</div>
+          <div class="app-card-title">Kitchen & Bathrooms</div>
+          <div class="app-card-desc">Mould-resistant, waterproof adhesives for wet area wall tiles in kitchens, bathrooms, and utility areas.</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="section-py section-light">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:56px;">
+      <div class="section-label" style="justify-content:center;" data-animate>Client Testimonials</div>
+      <h2 class="section-title" data-animate data-delay="100">Trusted by<br/><span class="text-navy">Industry Professionals</span></h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card" data-animate>
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">"We've specified SF 755 on three large commercial projects. The bond strength and S2 flexibility are exceptional. Our tiling contractors love the workability for large format tiles."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RK</div>
+          <div>
+            <div class="author-name">Rajesh Kumar</div>
+            <div class="author-role">Principal Architect, Studio K Design, Delhi</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-animate data-delay="100">
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">"SF 735 saved us on a premium marble flooring project. Perfect adhesion on 24×24 stone slabs. The technical team was on-site for support. Very professional."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MS</div>
+          <div>
+            <div class="author-name">Manish Shah</div>
+            <div class="author-role">Site Engineer, Shapoorji Pallonji Projects</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card" data-animate data-delay="200">
+        <div class="testimonial-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p class="testimonial-text">"As a tiling contractor for 18 years, product consistency matters most. Serafix delivers the same quality bag after bag. It's the brand I recommend to all my clients."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">VN</div>
+          <div>
+            <div class="author-name">Vinod Nair</div>
+            <div class="author-role">Master Tiler & Contractor, Mumbai</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================== CTA BANNER ===================== -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-banner-content">
+      <div class="section-label" style="justify-content:center;color:var(--gold-light);" data-animate>
+        Partner With Us
+      </div>
+      <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;" data-animate data-delay="100">
+        Grow Your Business<br/>with Serafix®
+      </h2>
+      <p style="font-size:1.1rem;max-width:560px;margin:0 auto 40px;" data-animate data-delay="200">
+        Join our expanding dealer and distributor network. Excellent margins, marketing support, and a brand your customers will trust.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;" data-animate data-delay="300">
+        <a href="dealers.html" class="btn btn-secondary btn-lg">Become a Dealer</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Contact Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Brand col -->
+      <div class="footer-logo-area">
+        <div class="logo-brand" style="margin-bottom:4px;">
+          <span class="logo-sera">SERA</span><span class="logo-fix">FIX</span><sup style="font-size:0.5rem;color:var(--red);margin-left:1px;">®</sup>
+        </div>
+        <div class="footer-tagline">Fix it Forever...</div>
+        <p class="footer-about">A Vipra Bonding Solutions (VBS) brand. Manufacturing premium construction adhesives that exceed international standards since 2009.</p>
+        <div class="footer-social">
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="index.html"        class="footer-link">Home</a></li>
+          <li><a href="about.html"        class="footer-link">About Us</a></li>
+          <li><a href="products.html"     class="footer-link">Products</a></li>
+          <li><a href="applications.html" class="footer-link">Applications</a></li>
+          <li><a href="quality.html"      class="footer-link">Quality & Certs</a></li>
+          <li><a href="dealers.html"      class="footer-link">Dealer Network</a></li>
+          <li><a href="contact.html"      class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="products/sf-705.html" class="footer-link">SF 705 — Floor Tile Adhesive</a></li>
+          <li><a href="products/sf-711.html" class="footer-link">SF 711 — Superior Tile Adhesive</a></li>
+          <li><a href="products/sf-722.html" class="footer-link">SF 722 — Non-Skid Adhesive</a></li>
+          <li><a href="products/sf-735.html" class="footer-link">SF 735 — Multipurpose Adhesive</a></li>
+          <li><a href="products/sf-755.html" class="footer-link">SF 755 — Flexible Tile Adhesive</a></li>
+          <li><a href="products/sf-217.html" class="footer-link">SF-217 — Waterproof Epoxy Grout</a></li>
+          <li><a href="products/sf-205.html" class="footer-link">SF-205 — Tile Grout</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="footer-contact-text">
+            <strong>Office Address</strong>
+            Vipra Bonding Solutions (VBS)<br/>
+            KH.No 38/20/21, Bawana Road,<br/>
+            Prahaladpur, Delhi-110042
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="footer-contact-text">
+            <strong>Phone</strong>
+            <a href="tel:+919540039312" style="color:inherit;">+91-9540039312</a>
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="footer-contact-text">
+            <strong>Email</strong>
+            <a href="mailto:viprabondingsolutions@gmail.com" style="color:inherit;">viprabondingsolutions@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <div class="footer-contact-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="footer-contact-text">
+            <strong>Business Hours</strong>
+            Mon–Sat: 9:00 AM – 6:00 PM
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        © 2025 Serafix® — Vipra Bonding Solutions Pvt. Ltd. All Rights Reserved.
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link">Privacy Policy</a>
+        <a href="#" class="footer-bottom-link">Terms of Use</a>
+        <a href="sitemap.xml" class="footer-bottom-link">Sitemap</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>

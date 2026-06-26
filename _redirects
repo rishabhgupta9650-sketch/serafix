@@ -1,0 +1,5 @@
+# Cloudflare Pages Redirects
+# Format: /old-url  /new-url  301
+
+/home         /index.html  301
+/products/*   /products/:splat  200
