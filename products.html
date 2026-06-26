@@ -127,6 +127,30 @@
       border-radius: 100px;
     }
 
+
+    .pdc-img-wrap {
+      background: #f8f9fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 20px 16px;
+      border-bottom: 1px solid var(--gray-200);
+      min-height: 200px;
+    }
+    .pdc-img {
+      max-height: 200px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-detail-card:hover .pdc-img {
+      transform: scale(1.04);
+    }
+    .pdc-header {
+      background: var(--gradient-navy) !important;
+    }
     .pdc-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
 
     .pdc-desc {
@@ -313,6 +337,9 @@
 
       <!-- SF 705: Premium Floor Tile Adhesive -->
       <div class="product-detail-card" data-animate data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-705-thumb.jpg" alt="Serafix SF 705 bag" class="pdc-img" loading="lazy">
+        </div>
         <div class="pdc-header">
           <div class="pdc-code">Adhesive Series · Floor Tiles</div>
           <div class="pdc-name">SF 705</div>
@@ -352,6 +379,9 @@
 
       <!-- SF 711: Superior Tile Adhesive -->
       <div class="product-detail-card" data-animate data-delay="100" data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-711-thumb.jpg" alt="Serafix SF 711 bag" class="pdc-img" loading="lazy">
+        </div>
         <div class="pdc-header" style="background:linear-gradient(135deg, #0D4F7A, #0A3E7A);">
           <div class="pdc-code">Adhesive Series · Floor & Wall</div>
           <div class="pdc-name">SF 711</div>
@@ -391,6 +421,9 @@
 
       <!-- SF 722: High-Strength Non-Skid -->
       <div class="product-detail-card" data-animate data-delay="200" data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-722-thumb.jpg" alt="Serafix SF 722 bag" class="pdc-img" loading="lazy">
+        </div>
         <div class="pdc-header" style="background:linear-gradient(135deg, #1a1a1a, #2a2a3a);">
           <div class="pdc-code">Adhesive Series · High Traffic</div>
           <div class="pdc-name">SF 722</div>
@@ -427,9 +460,54 @@
           </div>
         </div>
       </div>
+      <!-- SF 714: Molecular Fix Tile Adhesive -->
+      <div class="product-detail-card" data-animate data-delay="200" data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-714-thumb.jpg" alt="Serafix SF 714 bag" class="pdc-img" loading="lazy">
+        </div>
+        <div class="pdc-header" style="background:linear-gradient(135deg, #2E1065, #1A237E);">
+          <div class="pdc-code">Adhesive Series · Vitrified Tiles</div>
+          <div class="pdc-name">SF 714</div>
+          <div class="pdc-grade">Type-2T / C2TE · EN 12004</div>
+        </div>
+        <div class="pdc-body">
+          <p class="pdc-desc">Molecular Fix tile adhesive engineered for vitrified and large-format tiles on interior walls and floors. Advanced bonding technology for superior adhesion.</p>
+          <div class="pdc-specs">
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Indian Standard</div>
+              <div class="pdc-spec-value">IS:15477:2019</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Classification</div>
+              <div class="pdc-spec-value">Type-2T</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Color</div>
+              <div class="pdc-spec-value">Grey</div>
+            </div>
+            <div class="pdc-spec">
+              <div class="pdc-spec-label">Packaging</div>
+              <div class="pdc-spec-value">20 kg Bag</div>
+            </div>
+          </div>
+          <div class="pdc-uses">
+            <span class="tag">Vitrified Tiles</span>
+            <span class="tag tag-blue">Interior Wall & Floor</span>
+            <span class="tag">Molecular Bond</span>
+          </div>
+          <div class="pdc-footer">
+            <a href="products/sf-714.html" class="btn btn-primary btn-sm">View Details</a>
+            <a href="contact.html" class="btn btn-outline-navy btn-sm">Request Sample</a>
+          </div>
+        </div>
+      </div>
+
 
       <!-- SF 735: Superior Multipurpose -->
       <div class="product-detail-card" data-animate data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-735-thumb.jpg" alt="Serafix SF 735 bag" class="pdc-img" loading="lazy">
+        </div>
         <div class="pdc-header" style="background:linear-gradient(135deg, #0B1F52, #1A2A7A);">
           <div class="pdc-code">Adhesive Series · Multipurpose</div>
           <div class="pdc-name">SF 735</div>
@@ -470,6 +548,9 @@
 
       <!-- SF 755: Highly-Flexible Premium -->
       <div class="product-detail-card" data-animate data-delay="100" data-filter-item="adhesive">
+        <div class="pdc-img-wrap">
+          <img src="images/products/sf-755-thumb.jpg" alt="Serafix SF 755 bag" class="pdc-img" loading="lazy">
+        </div>
         <div class="pdc-header" style="background:linear-gradient(135deg, #1A237E, #311B92);">
           <div class="pdc-code">Adhesive Series · Premium Flexible</div>
           <div class="pdc-name">SF 755</div>
